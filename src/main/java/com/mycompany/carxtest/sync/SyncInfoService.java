@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.carxtest;
+package com.mycompany.carxtest.sync;
 
 /**
  *
  * @author Kamalion
  */
-public class Activity {
+public interface SyncInfoService {
+    
+    void save(String userId, SyncInfo info);
     
 }

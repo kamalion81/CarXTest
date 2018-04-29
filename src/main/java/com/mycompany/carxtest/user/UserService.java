@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.carxtest;
+package com.mycompany.carxtest.user;
+
+import java.util.List;
 
 /**
  *
  * @author Kamalion
  */
-public class SynchronizationInfo {
+public interface UserService {
+    
+    List<User> findAll();
+    User findById(String id);
+    User save(User user);
     
 }
