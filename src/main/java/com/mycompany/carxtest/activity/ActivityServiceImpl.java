@@ -21,6 +21,7 @@ public class ActivityServiceImpl implements ActivityService{
     @Autowired
     private ActivityInfoRepository repository;
     
+    @Autowired
     private UserRepository userRepository;
 
     @Override

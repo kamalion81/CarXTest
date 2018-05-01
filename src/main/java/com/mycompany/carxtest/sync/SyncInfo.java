@@ -5,7 +5,7 @@
  */
 package com.mycompany.carxtest.sync;
 
-import com.mycompany.carxtest.CountryCodes;
+import com.mycompany.carxtest.Country;
 import com.mycompany.carxtest.user.User;
 import java.io.Serializable;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class SyncInfo implements Serializable {
 
     private int money;
     private Date date;
-    private CountryCodes country;
+    private Country country;
     private User user;
     private boolean newUser;
 
@@ -72,16 +72,17 @@ public class SyncInfo implements Serializable {
         this.newUser = newUser;
     }
 
-    @Enumerated(EnumType.STRING)
-    public CountryCodes getCountry() {
+    @OneToOne
+    public Country getCountry() {
         return country;
     }
 
-    public void setCountry(CountryCodes country) {
+    public void setCountry(Country country) {
         this.country = country;
     }
 
     @OneToOne
+    @JoinColumn(name = "user_id")
     public User getUser() {
         return user;
     }

@@ -13,4 +13,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface SyncInfoRepository extends CrudRepository<SyncInfo, Integer>{
     
+    
+    
 }

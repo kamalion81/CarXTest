@@ -5,7 +5,7 @@
  */
 package com.mycompany.carxtest.user;
 
-import com.mycompany.carxtest.CountryCodes;
+import com.mycompany.carxtest.Country;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
