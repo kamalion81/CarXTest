@@ -5,6 +5,10 @@
  */
 package com.mycompany.carxtest.activity;
 
+import com.mycompany.carxtest.user.User;
+import java.util.Date;
+import java.util.List;
+
 /**
  *
  * @author Kamalion
@@ -12,5 +16,6 @@ package com.mycompany.carxtest.activity;
 public interface ActivityService {
     
     void save(String userId, int activity);
+    public List<Object> getActivity(User user, Date begin, Date end);
     
 }

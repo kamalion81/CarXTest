@@ -8,6 +8,7 @@ package com.mycompany.carxtest.activity;
 import com.mycompany.carxtest.user.User;
 import com.mycompany.carxtest.user.UserRepository;
 import java.util.Date;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,11 @@ public class ActivityServiceImpl implements ActivityService{
         info.setUser(findedUser);
         
         repository.save(info);
+    }
+
+    @Override
+    public List<Object> getActivity(User user, Date begin, Date end) {
+        return repository.getActivity(user, begin, end);
     }
     
 }

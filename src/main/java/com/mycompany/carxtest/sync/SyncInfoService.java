@@ -5,6 +5,9 @@
  */
 package com.mycompany.carxtest.sync;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  *
  * @author Kamalion
@@ -12,5 +15,6 @@ package com.mycompany.carxtest.sync;
 public interface SyncInfoService {
     
     void save(String userId, SyncInfo info);
+    List<Object> getCountOfNewUsers(Date begin, Date end);
     
 }
