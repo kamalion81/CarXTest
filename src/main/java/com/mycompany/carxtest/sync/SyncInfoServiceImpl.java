@@ -8,6 +8,7 @@ package com.mycompany.carxtest.sync;
 import com.mycompany.carxtest.user.User;
 import com.mycompany.carxtest.user.UserRepository;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,5 +45,11 @@ public class SyncInfoServiceImpl implements SyncInfoService {
 
         syncRepository.save(info);
     }
+
+    @Override
+    public List<Object> getCountOfNewUsers(Date begin, Date end) {
+        return syncRepository.getCountOfNewUsers(begin, end);
+    }
+
 
 }
