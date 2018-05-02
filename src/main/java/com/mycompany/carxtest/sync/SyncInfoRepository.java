@@ -19,7 +19,7 @@ public interface SyncInfoRepository extends CrudRepository<SyncInfo, Integer>{
     
     @Query("SELECT COUNT(u), u.country FROM SyncInfo u "
             + "WHERE u.newUser = true "
-            + "AND u.date BETWEEN :dateBegin AND :dateEnd"
+            + "AND u.date BETWEEN :dateBegin AND :dateEnd "
             + "GROUP BY u.country")
     public List<Object> getCountOfNewUsers(@Param(value = "dateBegin") Date dateBegin, @Param(value = "dateEnd") Date dateEnd);
     

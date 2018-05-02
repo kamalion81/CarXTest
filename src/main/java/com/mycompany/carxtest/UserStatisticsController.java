@@ -5,8 +5,10 @@
  */
 package com.mycompany.carxtest;
 
+import com.mycompany.carxtest.activity.ActivityService;
 import com.mycompany.carxtest.sync.SyncInfoService;
 import com.mycompany.carxtest.user.User;
+import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,17 +17,27 @@ import org.springframework.stereotype.Controller;
  *
  * @author Valya
  */
-//@Controller
+@Controller
 public class UserStatisticsController {
     
     @Autowired
     private SyncInfoService syncService;
     
-//    public List<User> getMostMoney(int quantity){
-//        
-//        
-//        
-//    }
+    @Autowired
+    private ActivityService activityService;
+    
+    public List<Object> getCountOfNewUsers(Date begin, Date end){
+        return syncService.getCountOfNewUsers(begin, end);
+    }
+    
+    public List<Object> getActivity(User user, Date begin, Date end){
+        return activityService.getActivity(user, begin, end);
+    }
+    
+    
+    
+    
+    
     
     
     

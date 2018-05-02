@@ -32,8 +32,7 @@
           p:minPoolSize="10"/>
     
           <jdbc:initialize-database data-source="dataSource">
-              <jdbc:script location=""/>
-              
+              <jdbc:script location="classpath:META-INF/config/import-data.sql"/>
           </jdbc:initialize-database>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
