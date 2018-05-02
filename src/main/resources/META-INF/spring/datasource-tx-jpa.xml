@@ -30,6 +30,11 @@
           p:maxPoolSize="100"
           p:maxStatements="50"
           p:minPoolSize="10"/>
+    
+          <jdbc:initialize-database data-source="dataSource">
+              <jdbc:script location=""/>
+              
+          </jdbc:initialize-database>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="emf"/>
